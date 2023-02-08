@@ -78,6 +78,21 @@
             })
         })
        
+        
+        function updatelastActivityTime(){
+            return new Promise((resolve,reject) =>{
+                setTimeout(()=>{
+                    posts.lastActivityTime = new date().getTime();
+                    resolve(posts.lastActivityTime)
+                },1000)
+            })
+        }
+        
+        userUpdatePost(){
+            promise.all([createPost,updatelastActivityTime]).then(([createPostresolve,updatelastActivityTimeresolve]) =>{
+            console.log(updatelastActivityTimeresolve)
+        })
+        }
 
         //promise Alll
         const promise1 = Promise.resolve('Hello World');
