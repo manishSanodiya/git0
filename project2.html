@@ -41,8 +41,8 @@
         
         const parentNode = document.getElementById('listofitems');
         const childHtml = `<li id=${user._id}> ${user.name} -${user.phone}
-        <button onclick=deleteUser('${user._id}')>delete</delete>
-        <button id='edit' onclick="editUserDetails('${user.name}','${user.phone}','${user._id}')">edit</button>
+        <button onclick=deleteUser('${user._id}')>remove product</delete>
+       
         </li>`
         parentNode.innerHTML = parentNode.innerHTML + childHtml
       }
@@ -98,14 +98,7 @@
    
          })
    
-         function editUserDetails(name, email ,phone,id) {
-           document.getElementById("name").value = name
-           
-           document.getElementById("phone").value = phone
-     
-       deleteUser(id)
-     
-   }
+        
   </script>
 </body>
 </html>
